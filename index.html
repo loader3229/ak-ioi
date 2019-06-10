@@ -23,14 +23,15 @@
 		<h2>Github工程：<a href="https://github.com/qq1010903229/ak-ioi">qq1010903229/ak-ioi</a></h2>
 		<p>He has AKed IOI <span class="counter">0</span> times.</p>
 		<p>他已经被您膜拜了 <span class="counter">0</span> 次。</p>
-		<button id="mobai" type="button" class="el-button el-button--primary is-plain is-round">点击膜拜</button>
+		<button id="mobai" type="button" class="el-button el-button--primary is-plain is-round">点击膜拜 1 次</button>
 		<script>
 			var counter = 0;
 			document.getElementById("mobai").onclick = function() {
-				++counter;
+				counter+=Math.floor(1+Math.pow(counter,0.6));
 				for(let item of document.getElementsByClassName("counter")) {
 					item.innerText = counter;
 				}
+				document.getElementById("mobai").innerHTML+=Math.floor(1+Math.pow(counter,0.6));
 			}
 		</script>
 	</header>
