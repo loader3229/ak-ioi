@@ -24,6 +24,7 @@
 		<p>He has AKed IOI <span class="counter">0</span> times.</p>
 		<p>他已经被您膜拜了 <span class="counter">0</span> 次。</p>
 		<button id="mobai" type="button" class="el-button el-button--primary is-plain is-round">点击膜拜 1 次</button>
+		<progress id="progress" max="15.8489"></progress>
 		<script>
 			var counter = 0;
 			document.getElementById("mobai").onclick = function() {
@@ -32,6 +33,19 @@
 					item.innerText = Math.min(counter,2147483647);
 				}
 				document.getElementById("mobai").innerHTML="点击膜拜 "+Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2))+" 次";
+				document.getElementById("progress").value=Math.pow(counter,0.4);
+				if(counter>1000){
+					document.getElementById("progress").value=Math.pow(counter,0.4)-15.8489;
+					document.getElementById("progress").max=100-15.8489;
+				}
+				if(counter>100000){
+					document.getElementById("progress").value=Math.pow(counter,0.4)-100;
+					document.getElementById("progress").max=630.9573-100;
+				}
+				if(counter>10000000){
+					document.getElementById("progress").value=Math.pow(counter,0.4)-630.9573;
+					document.getElementById("progress").max=5404.7044-630.9573;
+				}
 			}
 		</script>
 	</header>
