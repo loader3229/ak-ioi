@@ -19,8 +19,9 @@
 </head>
 <body>
 	<header>
-		<h1>膜拜 <span id="qq1010903229" style="color:#ff8c00;">qq1010903229</span></h1>
-		<h2>Github工程：<a href="https://github.com/qq1010903229/ak-ioi">qq1010903229/ak-ioi</a></h2>
+		<style id="style_qq1010903229">.qq1010903229{color:#ff8c00;}</style>
+		<h1>膜拜 <span class="qq1010903229">qq1010903229</span></h1>
+		<h2>Github工程：<a href="https://github.com/qq1010903229/ak-ioi"><span class="qq1010903229">qq1010903229</span>/ak-ioi</a></h2>
 		<p>He has AKed IOI <span class="counter">0</span> times.</p>
 		<p>他已经被您膜拜了 <span class="counter">0</span> 次。</p>
 		<button id="mobai" type="button" class="el-button el-button--primary is-plain is-round">点击膜拜 1 次</button><br>
@@ -28,14 +29,16 @@
 		<script>
 			var counter = 0;
 			document.getElementById("mobai").onclick = function() {
-				counter+=Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+0.5*(counter>=114514))*(1+0.2*(counter>=1919810))*(1+(counter>10000000))*(1+0.3*(counter>=19260817)));
-				if(counter==114307){counter=114514;alert("qq1010903229： 敢继续膜拜我吗？嘻嘻嘻！");document.getElementById("qq1010903229").style.color="#aa00aa";}
-				if(counter==1895836){counter=1919810;alert("qq1010903229： 再膜拜我我就要...嘻嘻嘻！");document.getElementById("qq1010903229").style.color="blue";}
-				if(counter==19359471){counter=19260817;alert("你得到了qq1010903229的一个口头禅：我爆零了。");document.getElementById("qq1010903229").style.color="#03a89e";}
+				counter+=Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+0.5*(counter>=114514))*(1+0.2*(counter>=1919810))*(1+(counter>10000000))*(1+0.3*(counter>=19260817))*(1+0.5*(counter>=104857601)));
+				if(counter==114307){counter=114514;alert("qq1010903229： 敢继续膜拜我吗？嘻嘻嘻！");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:#aa00aa;}";}
+				if(counter==1895836){counter=1919810;alert("qq1010903229： 再膜拜我我就要...嘻嘻嘻！");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:blue;}";}
+				if(counter==19359471){counter=19260817;alert("你得到了qq1010903229的一个口头禅：我爆零了。");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:#03a89e;}";}
+				if(counter==104018303){counter=104857601;alert("qq1010903229： 你的膜拜使我掉Rating了！嘻嘻嘻！");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:green;}";}
+				
 				for(let item of document.getElementsByClassName("counter")) {
 					item.innerText = Math.min(counter,2147483647);
 				}
-				document.getElementById("mobai").innerHTML="点击膜拜 "+Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+0.5*(counter>=114514))*(1+0.2*(counter>=1919810))*(1+(counter>10000000))*(1+0.3*(counter>=19260817)))+" 次";
+				document.getElementById("mobai").innerHTML="点击膜拜 "+Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+0.5*(counter>=114514))*(1+0.2*(counter>=1919810))*(1+(counter>10000000))*(1+0.3*(counter>=19260817))*(1+0.5*(counter>=104857601)))+" 次";
 				document.getElementById("progress").value=Math.pow(counter,0.4);
 				if(counter>1000){
 					document.getElementById("progress").value=Math.pow(counter,0.4)-15.8489;
