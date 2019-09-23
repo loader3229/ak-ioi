@@ -28,13 +28,14 @@
 		<script>
 			var counter = 0;
 			document.getElementById("mobai").onclick = function() {
-				counter+=Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+0.5*(counter>=114514))*(1+0.2*(counter>=1919810))*(1+(counter>10000000)));
+				counter+=Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+0.5*(counter>=114514))*(1+0.2*(counter>=1919810))*(1+(counter>10000000))*(1+0.3*(counter>=19260817)));
 				if(counter==114307){counter=114514;alert("qq1010903229： 敢继续膜拜我吗？嘻嘻嘻！");}
 				if(counter==1895836){counter=1919810;alert("qq1010903229： 再膜拜我我就要...嘻嘻嘻！");}
+				if(counter==19359471){counter=19260817;alert("你得到了qq1010903229的一个口头禅：我爆零了。");}
 				for(let item of document.getElementsByClassName("counter")) {
 					item.innerText = Math.min(counter,2147483647);
 				}
-				document.getElementById("mobai").innerHTML="点击膜拜 "+Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+0.5*(counter>=114514))*(1+0.2*(counter>=1919810))*(1+(counter>10000000)))+" 次";
+				document.getElementById("mobai").innerHTML="点击膜拜 "+Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+0.5*(counter>=114514))*(1+0.2*(counter>=1919810))*(1+(counter>10000000))*(1+0.3*(counter>=19260817)))+" 次";
 				document.getElementById("progress").value=Math.pow(counter,0.4);
 				if(counter>1000){
 					document.getElementById("progress").value=Math.pow(counter,0.4)-15.8489;
