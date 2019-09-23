@@ -29,6 +29,7 @@
 			var counter = 0;
 			document.getElementById("mobai").onclick = function() {
 				counter+=Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+(counter>10000000)));
+				if(counter==114307)counter=114514;
 				for(let item of document.getElementsByClassName("counter")) {
 					item.innerText = Math.min(counter,2147483647);
 				}
