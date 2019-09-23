@@ -29,13 +29,14 @@
 		<script>
 			var counter = 0;
 			document.getElementById("mobai").onclick = function() {
+				if(counter==2147483646)document.location.href="http://qq1010903229.akioi.cn/gg.html";
 				counter+=Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+(counter>1000))*(1+(counter>100000))*(1+0.5*(counter>=114514))*(1+0.2*(counter>=1919810))*(1+(counter>10000000))*(1+0.3*(counter>=19260817))*(1+0.5*(counter>=104857601))*(1+0.3*(counter>=998244353)));
 				if(counter==114307){counter=114514;alert("qq1010903229： 敢继续膜拜我吗？嘻嘻嘻！");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:#aa00aa;}";}
 				if(counter==1895836){counter=1919810;alert("qq1010903229： 再膜拜我我就要...嘻嘻嘻！");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:blue;}";}
-				if(counter==19359471){counter=19260817;alert("你得到了qq1010903229的一个口头禅：我爆零了。我该怎么办了？");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:#03a89e;}";}
+				if(counter==19359471){counter=19260817;alert("你得到了qq1010903229的一个口头禅：我爆零了。我该怎么办呢？");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:#03a89e;}";}
 				if(counter==104018303){counter=104857601;alert("qq1010903229： 你的膜拜使我掉Rating了！嘻嘻嘻！");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:green;}";}
 				if(counter==997841258){counter=998244353;alert("qq1010903229： 998244353... 一个我很熟悉的数字，你已经膜拜我正好 998244353 次了，嘻嘻嘻嘻嘻... (以下省略 998244353 个 “嘻”)");document.getElementById("style_qq1010903229").innerHTML=".qq1010903229{color:gray;}";}
-				
+				if(counter==2148650188){counter=2147483646;alert("qq1010903229：再膜拜我，我就要把你续掉！嘻嘻嘻嘻嘻... (以下省略 2^666666 个 “嘻”)");}
 				for(let item of document.getElementsByClassName("counter")) {
 					item.innerText = Math.min(counter,2147483647);
 				}
@@ -53,6 +54,9 @@
 					document.getElementById("progress").value=Math.pow(counter,0.4)-630.9573;
 					document.getElementById("progress").max=5404.7044-630.9573;
 				}
+				if(counter==2147483646){document.getElementById("mobai").innerHTML="膜拜最后一次！";
+							document.getElementById("mobai").style.color="white";
+							document.getElementById("mobai").style.backgroundColor="red";}
 			}
 		</script>
 	</header>
