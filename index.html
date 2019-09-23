@@ -28,11 +28,11 @@
 		<script>
 			var counter = 0;
 			document.getElementById("mobai").onclick = function() {
-				counter+=Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2));
+				counter+=Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+counter>1000)*(1+counter>100000)*(1+counter>10000000));
 				for(let item of document.getElementsByClassName("counter")) {
 					item.innerText = Math.min(counter,2147483647);
 				}
-				document.getElementById("mobai").innerHTML="点击膜拜 "+Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2))+" 次";
+				document.getElementById("mobai").innerHTML="点击膜拜 "+Math.floor(Math.max(1+Math.pow(counter,0.6),(1+Math.pow(1+8*counter,0.5))/2)*(1+counter>1000)*(1+counter>100000)*(1+counter>10000000))+" 次";
 				document.getElementById("progress").value=Math.pow(counter,0.4);
 				if(counter>1000){
 					document.getElementById("progress").value=Math.pow(counter,0.4)-15.8489;
